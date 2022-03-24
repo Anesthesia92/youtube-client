@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponentComponent } from './header/header-component/header-component.component';
 import { HeaderComponent } from './header/header.component';
 import { LiginComponent } from './header/ligin/ligin.component';
@@ -26,14 +26,10 @@ import { SearchInfoComponent } from './search-results/search-item/search-info/se
     SearchResultsComponent,
     FiltersComponent,
     SearchItemComponent,
-    SearchInfoComponent
+    SearchInfoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

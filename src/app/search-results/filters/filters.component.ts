@@ -1,16 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss']
+  styleUrls: ['./filters.component.scss'],
 })
-export class FiltersComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-}
+export class FiltersComponent {}
