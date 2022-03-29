@@ -13,6 +13,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { FiltersComponent } from './filters/filters.component';
 import { SearchItemComponent } from './search-results/search-item/search-item.component';
 import { SearchInfoComponent } from './search-results/search-item/search-info/search-info.component';
+import { InputComponent } from './filters/input/input.component';
+import { ButtonsComponent } from './filters/buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { SearchInfoComponent } from './search-results/search-item/search-info/se
     FiltersComponent,
     SearchItemComponent,
     SearchInfoComponent,
+    InputComponent,
+    ButtonsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
