@@ -1,11 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponentComponent } from './header/header-component/header-component.component';
 import { HeaderComponent } from './header/header.component';
-import { LiginComponent } from './header/ligin/ligin.component';
 import { LoginComponent } from './header/login/login.component';
 import { SearchInputComponent } from './header/search-input/search-input.component';
 import { SettingsComponent } from './header/settings/settings.component';
@@ -15,13 +13,14 @@ import { SearchItemComponent } from './search-results/search-item/search-item.co
 import { SearchInfoComponent } from './search-results/search-item/search-info/search-info.component';
 import { InputComponent } from './filters/input/input.component';
 import { ButtonsComponent } from './filters/buttons/buttons.component';
+import { AngularMaterialModule } from "./material/material.module";
+import {MatIconModule} from "@angular/material/icon";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponentComponent,
     HeaderComponent,
-    LiginComponent,
     LoginComponent,
     SearchInputComponent,
     SettingsComponent,
@@ -32,8 +31,9 @@ import { ButtonsComponent } from './filters/buttons/buttons.component';
     InputComponent,
     ButtonsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule, MatIconModule, MatToolbarModule],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
