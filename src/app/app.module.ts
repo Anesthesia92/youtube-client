@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './header/login/login.component';
 import { SearchInputComponent } from './header/search-input/search-input.component';
-import { SettingsComponent } from './header/settings/settings.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { FiltersComponent } from './filters/filters.component';
 import { SearchItemComponent } from './search-results/search-item/search-item.component';
@@ -16,6 +15,8 @@ import { ButtonsComponent } from './filters/buttons/buttons.component';
 import { AngularMaterialModule } from "./material/material.module";
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,6 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     HeaderComponent,
     LoginComponent,
     SearchInputComponent,
-    SettingsComponent,
     SearchResultsComponent,
     FiltersComponent,
     SearchItemComponent,
@@ -31,7 +31,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     InputComponent,
     ButtonsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule, MatIconModule, MatToolbarModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

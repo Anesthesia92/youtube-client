@@ -2,4 +2,7 @@
 
 mat-toolbar {
   @include main;
+  height: 80px;
+  display: flex;
+  justify-content: center;
 }
