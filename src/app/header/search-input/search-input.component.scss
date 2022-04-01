@@ -4,6 +4,7 @@ $blue: #2F80ED;
 
 .search-container {
   width: 850px;
+  height: 80px;
 }
 
 mat-toolbar {
@@ -12,13 +13,14 @@ mat-toolbar {
   justify-content: space-between;
   padding: 0;
   margin: 0 auto;
+  height: 80px;
+  background-color: $gray;
 }
 
 .button-on {
-  min-width: 40px;
-  height: 39px;
-  background-color: $gray;
-  border-radius: 10%;
+  min-width: 38px;
+  height: 35px;
+  border-radius: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
