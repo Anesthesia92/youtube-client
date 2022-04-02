@@ -3,14 +3,16 @@
 $blue: #2F80ED;
 $gray: #E5E5E5;
 
+mat-toolbar {
+  height: 50px;
+  background-color: $gray;
+}
+
 .buttons__container {
   @include main;
-  height: 50px;
   display: flex;
   width: 100%;
-  position: absolute;
   left: 0;
-  background-color: $gray;
   align-items: center;
   &-sort {
     display: flex;

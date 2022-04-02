@@ -1,0 +1,38 @@
+$blue: #2F80ED;
+@import '../../app.component';
+
+mat-card {
+  margin-top: 31px;
+  padding: 0;
+  width: 263px;
+  height: 327px;
+  background: #E5E5E5;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-video {
+  width: 223px;
+  height: 123px;
+}
+.card-title {
+  width: 223px;
+  height: 23px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #4F4F4F;
+}
+.card-button {
+  @include button;
+  width: 120px;
+  height: 32px;
+  margin: 0 auto;
+}
+.card-item {
+  width: 263px;
+  height: 5px;
+  border-radius: 0 0 5px 5px;
+  background-color: $blue;
+}
