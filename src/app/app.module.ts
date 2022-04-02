@@ -17,6 +17,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTreeModule } from "@angular/material/tree";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -29,9 +30,9 @@ import { MatTreeModule } from "@angular/material/tree";
     SearchItemComponent,
     SearchInfoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule,
-    MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatExpansionModule,
-    MatTreeModule],
+    imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule,
+        MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatExpansionModule,
+        MatTreeModule, MatCardModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
