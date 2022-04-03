@@ -7,5 +7,5 @@ export interface SearchResults {
     totalResults: number;
     resultsPerPage: number;
   };
-  item: SearchItem[];
+  items: SearchItem[];
 }

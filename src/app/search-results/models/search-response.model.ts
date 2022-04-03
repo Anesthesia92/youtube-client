@@ -3,6 +3,7 @@ interface SearchInputSnippetThumbnails {
   width: number;
   height: number;
 }
+
 interface SearchItemSnippet {
   publishedAt: string;
   channelId: string;
@@ -19,12 +20,13 @@ interface SearchItemSnippet {
   tags: string[];
   categoryId: string;
   liveBroadcastContent: string;
-  localize: {
+  localized: {
     title: string;
     description: string;
   };
   defaultAudioLanguage: string;
 }
+
 interface SearchItemStatistics {
   viewCount: string;
   likeCount: string;
@@ -32,6 +34,7 @@ interface SearchItemStatistics {
   favoriteCount: string;
   commentCount: string;
 }
+
 export interface SearchItem {
   kind: string;
   etag: string;
@@ -39,3 +42,4 @@ export interface SearchItem {
   snippet: SearchItemSnippet;
   statistics: SearchItemStatistics;
 }
+
