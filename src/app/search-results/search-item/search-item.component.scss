@@ -1,12 +1,13 @@
-$blue: #2F80ED;
 @import '../../app.component';
+$blue: #2F80ED;
+$grey: #E5E5E5;
 
 mat-card {
   margin-top: 31px;
   padding: 0;
   width: 263px;
   height: 327px;
-  background: #E5E5E5;
+  background: $grey;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -15,6 +16,8 @@ mat-card {
 .card-video {
   width: 223px;
   height: 123px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 .card-title {
   width: 223px;
@@ -28,7 +31,7 @@ mat-card {
   @include button;
   width: 120px;
   height: 32px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 .card-item {
   width: 263px;

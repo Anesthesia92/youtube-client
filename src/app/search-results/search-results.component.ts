@@ -1,8 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// import { SearchResults } from "./models/search-item.model";
+// import { ItemService } from "./item.service";
+// import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss'],
 })
-export class SearchResultsComponent {}
+export class SearchResultsComponent implements OnInit{
+
+
+  constructor () {
+  }
+
+  ngOnInit(): void {
+    // this.cardsList= this.itemService.getAllCards();
+    // this.itemCards = this.cardsList[0].items
+    // console.log( this.itemCards)
+  }
+}

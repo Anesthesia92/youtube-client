@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {SearchResults} from "./models/search-item.model";
+import { SearchResults } from "./models/search-item.model";
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +7,9 @@ import {SearchResults} from "./models/search-item.model";
 
 export class ItemService {
 
-  constructor() { }
+  constructor () {}
 
-  public card = [
+  public cardItems = [
     {
       "kind": "youtube#videoListResponse",
       "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/Cmodw7c5XPTM8Yg3kMXelihxek4\"",
@@ -26,11 +26,17 @@ export class ItemService {
             "publishedAt": "2019-05-30T12:42:19.000Z",
             "channelId": "UCg8ss4xW9jASrqWGP30jXiw",
             "title": "Angular 8 - Быстрый курс за 60 минут",
-            "description": "Полный курс по Angular 8+:\nhttps://clc.to/angular\n\nTelegram: https://teleg.one/js_by_vladilen \nInstagram: https://www.instagram.com/vladilen.minin" +
-              " \nVK: https://vk.com/vladilen.minin \nГруппа VK: https://vk.com/js_by_vladilen \n\nReact Native: мобильная разработка на JavaScript:\nhttps://clc.to/rnative\n\nПоддержать " +
-              "выпуск новых видео:\nЯД: https://money.yandex.ru/to/410013757655670\nPayPal: https://www.paypal.me/vladilenm \n\n30 мая 2019 года бы релиз Angular 8 и я решил записать " +
-              "по нему быстрый курс. В видео вы узнаете, как Angular работает, как его установить.\nВ результате урока я покажу создание Todo приложения с разными подходами. " +
-              "Разберем работу с сервером, сервисами, пайпами, коммуникацией между компонентами и немного RxJS\n\nИсходный код:\nhttps://github.com/vladilenm/angular8-cc\n\nAngular " +
+            "description": "Полный курс по Angular 8+:\nhttps://clc.to/angular\n\nTelegram: https://teleg.one/js_by_vladilen " +
+              "\nInstagram: https://www.instagram.com/vladilen.minin" +
+              " \nVK: https://vk.com/vladilen.minin " +
+              "\nГруппа VK: https://vk.com/js_by_vladilen " +
+              "\n\nReact Native: мобильная разработка на JavaScript:\nhttps://clc.to/rnative\n\nПоддержать " +
+              "выпуск новых видео:\nЯД: https://money.yandex.ru/to/410013757655670\nPayPal: https://www.paypal.me/vladilenm" +
+              " \n\n30 мая 2019 года бы релиз Angular 8 и я решил записать " +
+              "по нему быстрый курс. В видео вы узнаете, как Angular работает, как его установить.\nВ результате урока я покажу создание" +
+              " Todo приложения с разными подходами. " +
+              "Разберем работу с сервером, сервисами, пайпами, коммуникацией между компонентами и немного RxJS\n\nИсходный " +
+              "код:\nhttps://github.com/vladilenm/angular8-cc\n\nAngular " +
               "8 - Быстрый курс за 60 минут",
             "thumbnails": {
               "default": {
@@ -775,8 +781,8 @@ export class ItemService {
     }
   ];
 
-  public getAll(): SearchResults[] {
-    return this.card;
+  public getAllCards(): SearchResults[] {
+    return this.cardItems;
   }
 
 }

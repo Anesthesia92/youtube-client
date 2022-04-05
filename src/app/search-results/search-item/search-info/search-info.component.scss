@@ -3,4 +3,16 @@
   background-color: #E5E5E5;
   padding: 0;
   justify-content: space-evenly;
+  .count {
+    display: flex;
+    cursor: pointer;
+  }
+  .count:hover {
+    filter: drop-shadow(16px 16px 20px #27b6a7) invert(50%);
+    transition-duration: 700ms;
+  }
 }
+
+
+
+
