@@ -1,6 +1,7 @@
-<mat-card  *ngFor="let item of itemCards">
-  <div class="card-video"></div>
-  <app-search-info></app-search-info>
+<mat-card *ngFor="let item of itemCards">
+  <div class="card-video">
+    <img src="{{item.snippet.thumbnails.medium.url}}" alt="img"></div>
+  <app-search-info [item]="item"></app-search-info>
   <mat-card-title class="card-title">{{item.kind}} {{item.snippet.categoryId}}</mat-card-title>
     <button mat-button class="card-button">more...</button>
   <span class="card-item"></span>

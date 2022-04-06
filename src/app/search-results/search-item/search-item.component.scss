@@ -18,10 +18,15 @@ mat-card {
   height: 123px;
   margin: 0 auto;
   padding-top: 20px;
+  img {
+    width: 223px;
+    height: 123px;
+  }
 }
 .card-title {
   width: 223px;
-  height: 23px;
+  height: 20px;
+  text-align: right;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
