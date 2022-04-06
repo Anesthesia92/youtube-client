@@ -1,0 +1,15 @@
+.search-container {
+  width: 100%;
+  &__cards {
+    margin: 0 auto;
+    width: 1150px;
+    height: 770px;
+    overflow-y: hidden;
+  }
+}
+
+app-search-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

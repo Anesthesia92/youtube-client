@@ -1,0 +1,26 @@
+.information {
+  display: flex;
+  background-color: #E5E5E5;
+  padding: 0;
+  justify-content: space-evenly;
+  .count {
+    display: flex;
+    cursor: pointer;
+    align-items: flex-end;
+    p {
+      margin: 0;
+      font-size: 10px;
+      line-height: 11px;
+      padding-left: 2px;
+    }
+  }
+  .count:hover {
+    filter: drop-shadow(16px 16px 20px #27b6a7) invert(50%);
+    transition-duration: 700ms;
+  }
+
+}
+
+
+
+

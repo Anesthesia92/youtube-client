@@ -1,0 +1,49 @@
+@import '../app.component';
+
+$blue: #2F80ED;
+$gray: #E5E5E5;
+
+mat-toolbar {
+  height: 50px;
+  background-color: $gray;
+}
+
+.buttons__container {
+  @include main;
+  display: flex;
+  width: 100%;
+  left: 0;
+  align-items: center;
+  &-sort {
+    display: flex;
+    @include text;
+    width: 745px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    .search-input {
+      input {
+        border: 1px solid white;
+        width: 149px;
+        height: 13px;
+      }
+    }
+  }
+}
+
+.buttons-sorting {
+  color: #929292;
+  &__settings {
+    color: $blue;
+    width: 263px;
+    display: flex;
+    justify-content: space-around;
+    a {
+      color: $blue;
+    }
+  }
+}
+
+.sort {
+  margin: 0;
+  align-items: center;
+}
