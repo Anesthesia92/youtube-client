@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchResults } from "../models/search-item.model";
-import { ItemService } from "../item.service";
+import { ItemService } from "../../services/item.service";
 import { Observable } from "rxjs";
 
 

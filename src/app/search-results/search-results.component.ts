@@ -15,8 +15,6 @@ export class SearchResultsComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    // this.cardsList= this.itemService.getAllCards();
-    // this.itemCards = this.cardsList[0].items
-    // console.log( this.itemCards)
+
   }
 }
