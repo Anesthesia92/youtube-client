@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchResults } from "../models/search-item.model";
 import { ItemService } from "../../services/item.service";
-import { Observable } from "rxjs";
+import { SearchItem } from "../models/search-response.model";
 
 
 @Component({
@@ -10,15 +10,15 @@ import { Observable } from "rxjs";
   styleUrls: ['./search-item.component.scss'],
 })
 export class SearchItemComponent implements OnInit {
-  public cardsList: SearchResults[] = [];
-  public itemCards: any;
+
+  public cardsList: SearchResults | undefined;
+  public itemCards: SearchItem[] = [];
   constructor (private itemService: ItemService) {
   }
 
   ngOnInit(): void {
     this.cardsList= this.itemService.getAllCards();
-    this.itemCards = this.cardsList[0].items
+    this.itemCards = this.cardsList.items;
     console.log( this.itemCards)
   }
-
 }

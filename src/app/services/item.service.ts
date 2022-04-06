@@ -9,7 +9,7 @@ export class ItemService {
 
   constructor () {}
 
-  public cardItems = [
+  public cardItems =
     {
       "kind": "youtube#videoListResponse",
       "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/Cmodw7c5XPTM8Yg3kMXelihxek4\"",
@@ -779,9 +779,8 @@ export class ItemService {
         }
       ]
     }
-  ];
 
-  public getAllCards(): SearchResults[] {
+  public getAllCards(): SearchResults {
     return this.cardItems;
   }
 
