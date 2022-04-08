@@ -2,7 +2,7 @@
   <div class="card-video">
     <img src="{{item.snippet.thumbnails.medium.url}}" alt="img"></div>
   <app-search-info [item]="item"></app-search-info>
-  <mat-card-title class="card-title">{{item.kind}} {{item.snippet.categoryId}}</mat-card-title>
+  <mat-card-title class="card-title">{{item.snippet.localized.title}} </mat-card-title>
     <button mat-button class="card-button">more...</button>
   <span class="card-item"></span>
 </mat-card>

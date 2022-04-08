@@ -9,9 +9,14 @@ export class SearchInputComponent {
 
   @Input() areResultsVisible!: boolean | string;
   @Output() areResultsVisibleChange = new EventEmitter<boolean>();
+  @Output() changeFilterComponent = new EventEmitter<boolean>();
 
   public goSearch(searchText: string) {
     this.areResultsVisible = !!searchText;
     this.areResultsVisibleChange.emit(this.areResultsVisible);
+  }
+
+  public toggleFilterComponent() {
+    this.changeFilterComponent.emit(true);
   }
 }
