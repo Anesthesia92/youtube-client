@@ -19,4 +19,5 @@ export class SearchInputComponent {
   public toggleFilterComponent() {
     this.changeFilterComponent.emit(true);
   }
+
 }

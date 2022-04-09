@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <app-search-input></app-search-input>
+  <app-search-input (changeFilterComponent)="toggleFilter = !toggleFilter"></app-search-input>
 <app-login></app-login>
 </mat-toolbar>
-  <app-filters></app-filters>
+<app-filters *ngIf="toggleFilter"></app-filters>

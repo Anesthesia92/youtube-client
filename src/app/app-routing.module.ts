@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HeaderComponent } from "./header/header.component";
+import { SearchResultsComponent } from "./search-results/search-results.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: HeaderComponent },
+  { path: '**', component: SearchResultsComponent},
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports:
+    [
+      RouterModule
+    ]
 })
 export class AppRoutingModule {}
