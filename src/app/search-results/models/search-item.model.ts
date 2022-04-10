@@ -8,4 +8,5 @@ export interface SearchResults {
     resultsPerPage: number;
   };
   items: SearchItem[];
+
 }

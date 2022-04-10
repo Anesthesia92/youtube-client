@@ -2,17 +2,6 @@
 $blue: #2F80ED;
 $grey: #E5E5E5;
 
-mat-card {
-  margin-top: 31px;
-  padding: 0;
-  width: 263px;
-  height: 327px;
-  background: $grey;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .card-video {
   width: 223px;
   height: 123px;
@@ -44,4 +33,8 @@ mat-card {
   height: 5px;
   border-radius: 0 0 5px 5px;
   background-color: $blue;
+}
+
+app-search-info {
+  width: 100%;
 }

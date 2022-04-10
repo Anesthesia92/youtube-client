@@ -1,5 +1,7 @@
 <app-header></app-header>
 <div class="search-container">
 <div class="search-container__cards">
-<app-search-item></app-search-item>
+  <mat-card *ngFor="let item of items">
+<app-search-item [item]="item"> </app-search-item>
+    </mat-card>
 </div></div>

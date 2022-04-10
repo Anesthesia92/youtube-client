@@ -1,26 +1,28 @@
-import {Component, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { SearchResults } from "../models/search-item.model";
 import { ItemService } from "../../services/item.service";
 import { SearchItem } from "../models/search-response.model";
+import { SortingService } from "../../services/sorting.service";
 
 @Component({
   selector: 'app-search-item',
   templateUrl: './search-item.component.html',
   styleUrls: ['./search-item.component.scss'],
 })
-export class SearchItemComponent{
+
+export class SearchItemComponent {
 
   public cardsList: SearchResults | undefined;
   public itemCards: SearchItem[] = [];
 
-  constructor (private itemService: ItemService) {
+  @Input() item: any;
+
+  constructor (
+
+  ) {
   }
 
   ngOnInit(): void {
-
-    this.cardsList= this.itemService.getAllCards();
-    this.itemCards = this.cardsList.items;
-    console.log(this.itemCards)
 
   }
 

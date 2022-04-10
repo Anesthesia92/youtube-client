@@ -23,10 +23,10 @@ export class SearchInfoComponent {
   ngOnInit(): void {
     this.itemService.filterItemsList$.subscribe(() => {
       this.cardsList = this.itemService.getAllCards();
-    })
+    });
+
   this.cardsList = this.itemService.getAllCards();
     this.itemCards = this.cardsList.items;
-    console.log(this.itemCards)
   }
 
 }

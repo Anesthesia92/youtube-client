@@ -19,6 +19,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTreeModule } from "@angular/material/tree";
 import {MatCardModule} from "@angular/material/card";
 import {FormsModule} from "@angular/forms";
+import { StatusDirective } from './directives/status.directive';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {FormsModule} from "@angular/forms";
     FiltersComponent,
     SearchItemComponent,
     SearchInfoComponent,
+    StatusDirective,
   ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule,
         MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatExpansionModule,

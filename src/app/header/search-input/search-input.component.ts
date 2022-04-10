@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search-input',
@@ -7,18 +7,23 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class SearchInputComponent {
 
-  @Output() goSearch = new EventEmitter<string>();
-  @Output() changeFilterComponent = new EventEmitter<boolean>();
+  @Output() public goSearch: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public changeFilterComponent = new EventEmitter<boolean>();
 
+  public filter: string = '';
   private searchQuery = '';
   private isSearchingText: boolean = false;
 
   public onSearch() {
     this.isSearchingText = !this.searchQuery;
+    this.goSearch.emit(this.searchQuery);
   }
 
   public toggleFilterComponent() {
     this.changeFilterComponent.emit(true);
   }
 
+  public filtering() {
+    this.goSearch.emit(this.filter);
+  }
 }
