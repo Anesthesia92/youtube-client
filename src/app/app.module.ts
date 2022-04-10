@@ -18,6 +18,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTreeModule } from "@angular/material/tree";
 import {MatCardModule} from "@angular/material/card";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import {MatCardModule} from "@angular/material/card";
   ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule,
         MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatExpansionModule,
-        MatTreeModule, MatCardModule],
+        MatTreeModule, MatCardModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

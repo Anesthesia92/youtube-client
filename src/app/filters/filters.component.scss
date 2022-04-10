@@ -16,6 +16,7 @@ mat-toolbar {
   align-items: center;
   &-sort {
     display: flex;
+    cursor: pointer;
     @include text;
     width: 745px;
     margin: 0 auto;

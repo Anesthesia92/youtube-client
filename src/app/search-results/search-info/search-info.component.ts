@@ -1,9 +1,8 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SearchItemComponent } from "../search-item/search-item.component";
 import { ItemService } from "../../services/item.service";
 import { SearchItem } from "../models/search-response.model";
 import { SearchResults } from "../models/search-item.model";
-
 
 @Component({
   selector: 'app-search-info',
@@ -15,6 +14,7 @@ export class SearchInfoComponent {
 
   public cardsList: SearchResults | undefined;
   public itemCards: SearchItem[] = [];
+
   @Input() item: any;
 
   constructor (private searchItemComponent: SearchItemComponent, private itemService: ItemService) {
@@ -28,4 +28,5 @@ export class SearchInfoComponent {
     this.itemCards = this.cardsList.items;
     console.log(this.itemCards)
   }
+
 }

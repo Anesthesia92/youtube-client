@@ -7,13 +7,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class SearchInputComponent {
 
-  @Input() areResultsVisible!: boolean | string;
-  @Output() areResultsVisibleChange = new EventEmitter<boolean>();
+  @Output() goSearch = new EventEmitter<string>();
   @Output() changeFilterComponent = new EventEmitter<boolean>();
 
-  public goSearch(searchText: string) {
-    this.areResultsVisible = !!searchText;
-    this.areResultsVisibleChange.emit(this.areResultsVisible);
+  private searchQuery = '';
+  private isSearchingText: boolean = false;
+
+  public onSearch() {
+    this.isSearchingText = !this.searchQuery;
   }
 
   public toggleFilterComponent() {

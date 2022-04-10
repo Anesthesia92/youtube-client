@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SortingService } from "../services/sorting.service";
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,19 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   public toggleFilter = false;
+
+  constructor () {
+  }
+
+  private sorting: SortingService = new SortingService;
+
+  public goSearch(searchQuery: string) {
+    if (searchQuery === '') searchQuery = 'Angular';
+    this.sorting.applySearch(searchQuery)
+  }
+
+  public onSort(sortParam: string): void {
+    this.sorting.applySort(sortParam);
+  }
 
 }

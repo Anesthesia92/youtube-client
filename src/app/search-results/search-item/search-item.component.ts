@@ -17,9 +17,11 @@ export class SearchItemComponent{
   }
 
   ngOnInit(): void {
+
     this.cardsList= this.itemService.getAllCards();
     this.itemCards = this.cardsList.items;
     console.log(this.itemCards)
+
   }
 
 }
