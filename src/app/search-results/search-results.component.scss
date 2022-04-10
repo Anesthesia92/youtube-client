@@ -1,3 +1,6 @@
+$blue: #2F80ED;
+$grey: #E5E5E5;
+
 .search-container {
   width: 100%;
   &__cards {
@@ -5,11 +8,28 @@
     width: 1150px;
     height: 770px;
     overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+}
+
+mat-card {
+  margin-top: 31px;
+  padding: 0;
+  width: 263px;
+  height: 327px;
+  background: $grey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 app-search-item {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  height: 327px;
+  align-content: space-between;
+  justify-content: space-around;
 }

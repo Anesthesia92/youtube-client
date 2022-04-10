@@ -10,12 +10,10 @@ export class HeaderComponent {
 
   public toggleFilter = false;
 
-  constructor () {
+  constructor (private sorting: SortingService) {
   }
 
-  private sorting: SortingService = new SortingService;
-
-  public goSearch(searchQuery: string) {
+  public goSearch(searchQuery: string): void {
     if (searchQuery === '') searchQuery = 'Angular';
     this.sorting.applySearch(searchQuery)
   }

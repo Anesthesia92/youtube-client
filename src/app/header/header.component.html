@@ -1,6 +1,7 @@
 <mat-toolbar>
   <app-search-input (goSearch)="goSearch($event)"
-                    (changeFilterComponent)="toggleFilter = !toggleFilter">
+                    (changeFilterComponent)="toggleFilter = !toggleFilter"
+  autocomplete="off">
   </app-search-input>
 <app-login></app-login>
 </mat-toolbar>
