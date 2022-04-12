@@ -5,6 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './search-input.component.html',
   styleUrls: ['./search-input.component.scss'],
 })
+
 export class SearchInputComponent {
 
   @Output() public goSearch: EventEmitter<string> = new EventEmitter<string>();
@@ -25,5 +26,6 @@ export class SearchInputComponent {
 
   public filtering() {
     this.goSearch.emit(this.filter);
+
   }
 }

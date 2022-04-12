@@ -1,8 +1,8 @@
 import {Component, Input} from '@angular/core';
 import { SearchResults } from "../models/search-item.model";
-import { ItemService } from "../../services/item.service";
+import { ItemService } from "../../../../shared/services/item.service";
 import { SearchItem } from "../models/search-response.model";
-import { SortingService } from "../../services/sorting.service";
+import { SortingService } from "../../../../shared/services/sorting.service";
 
 @Component({
   selector: 'app-search-item',
@@ -16,14 +16,5 @@ export class SearchItemComponent {
   public itemCards: SearchItem[] = [];
 
   @Input() item: any;
-
-  constructor (
-
-  ) {
-  }
-
-  ngOnInit(): void {
-
-  }
 
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { SortingTypes } from "./models/sorting-types.enum";
+import { SortingTypes } from "../../../shared/models/sorting-types.enum";
 
 @Component({
   selector: 'app-filters',
