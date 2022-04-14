@@ -19,8 +19,9 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTreeModule } from "@angular/material/tree";
 import {MatCardModule} from "@angular/material/card";
 import {FormsModule} from "@angular/forms";
-import { StatusDirective } from './shared/directives/status.directive';
+import { BottomColorDirective } from './shared/directives/bottom-color.directive';
 import { SortingPipe } from './youtube/pipes/sorting.pipe';
+import { AuthorizationComponent } from './auth/components/authorization/authorization.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { SortingPipe } from './youtube/pipes/sorting.pipe';
     FiltersComponent,
     SearchItemComponent,
     SearchInfoComponent,
-    StatusDirective,
+    BottomColorDirective,
     SortingPipe,
+    AuthorizationComponent,
   ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule,
         MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatExpansionModule,

@@ -11,9 +11,6 @@ export class SortingPipe implements PipeTransform {
   public currentFilter: string = '';
 
   public transform(value: SearchItem[], args: string): SearchItem[] {
-    if (args === '') {
-      return value;
-    }
     if (args in SortingTypes && this.currentFilter != '') {
       value = this.filter(value, this.currentFilter);
     }
@@ -32,7 +29,7 @@ export class SortingPipe implements PipeTransform {
     }
   }
   public maxViewSorting(value: SearchItem[]): SearchItem[] {
-    return value.sort(
+    return [...value].sort(
       (a: SearchItem, b: SearchItem): number =>
         parseInt(a.statistics.viewCount, 10) -
         parseInt(b.statistics.viewCount, 10)
@@ -40,7 +37,7 @@ export class SortingPipe implements PipeTransform {
   }
 
   public minViewSorting(value: SearchItem[]): SearchItem[] {
-    return value.sort(
+    return [...value].sort(
       (a: SearchItem, b: SearchItem): number =>
         parseInt(a.statistics.viewCount, 10) -
         parseInt(b.statistics.viewCount, 10)
@@ -48,7 +45,7 @@ export class SortingPipe implements PipeTransform {
   }
 
   public newDateSorting(value: SearchItem[]): SearchItem[] {
-    return value.sort(
+    return [...value].sort(
       (a: SearchItem, b: SearchItem): number =>
       new Date(b.snippet.publishedAt).valueOf() -
         new Date(a.snippet.publishedAt).valueOf()
@@ -56,7 +53,7 @@ export class SortingPipe implements PipeTransform {
   }
 
   public oldDateSorting(value: SearchItem[]): SearchItem[] {
-    return value.sort(
+    return [...value].sort(
       (a: SearchItem, b: SearchItem): number =>
         new Date(b.snippet.publishedAt).valueOf() -
         new Date(a.snippet.publishedAt).valueOf()
@@ -64,7 +61,7 @@ export class SortingPipe implements PipeTransform {
   }
 
   private filter(value: SearchItem[], args: string): SearchItem[] {
-    return value.filter((obj: SearchItem): boolean =>
+    return [...value].filter((obj: SearchItem): boolean =>
       obj.snippet.title.toLowerCase().includes(args.toLowerCase())
     );
   }

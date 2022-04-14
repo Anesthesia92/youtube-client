@@ -3,4 +3,4 @@
   <app-search-info [item]="item"></app-search-info>
   <mat-card-title class="card-title">{{item.snippet.localized.title}} </mat-card-title>
     <button mat-button class="card-button">more...</button>
-  <span class="card-item"></span>
+  <div class="card-color" appBottomBorderColor="{{ item?.snippet?.publishedAt }}"></div>
