@@ -22,6 +22,7 @@ import {FormsModule} from "@angular/forms";
 import { BottomColorDirective } from './shared/directives/bottom-color.directive';
 import { SortingPipe } from './youtube/pipes/sorting.pipe';
 import { AuthorizationComponent } from './auth/components/authorization/authorization.component';
+import { PageAuthComponent } from './auth/pages/page-auth/page-auth.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AuthorizationComponent } from './auth/components/authorization/authoriz
     BottomColorDirective,
     SortingPipe,
     AuthorizationComponent,
+    PageAuthComponent,
   ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule,
         MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatExpansionModule,
