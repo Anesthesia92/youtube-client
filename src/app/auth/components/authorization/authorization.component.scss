@@ -1,0 +1,40 @@
+mat-card {
+  width: 350px;
+  height: 250px;
+  background-color: #F2F2F2;
+}
+
+.auth-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &__login {
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+  &__inputs {
+    width: 211px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    input {
+      background: #E0E0E0;
+      width: 304px;
+      height: 37px;
+    }
+    .input-text {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      color: #828282;
+    }
+  }
+}
+
