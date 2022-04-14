@@ -2,6 +2,7 @@ mat-card {
   width: 350px;
   height: 250px;
   background-color: #F2F2F2;
+  margin: 120px auto 0;
 }
 
 .auth-container {
@@ -18,14 +19,15 @@ mat-card {
     }
   }
   &__inputs {
-    width: 211px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     input {
       background: #E0E0E0;
-      width: 304px;
+      width: 343px;
       height: 37px;
+      border: 1px solid #F2F2F2;
     }
     .input-text {
       font-family: 'Roboto', sans-serif;
@@ -35,6 +37,11 @@ mat-card {
       line-height: 12px;
       color: #828282;
     }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
   }
 }
 
