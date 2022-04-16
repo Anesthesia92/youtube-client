@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import SortingTypes from "../../shared/models/sorting-types.enum";
-import {SearchItem} from "../components/search-results/models/search-response.model";
+import {SearchItem} from "../models/search-response.model";
 
 @Pipe({
   name: 'sorting'

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SearchResults } from "../../youtube/components/search-results/models/search-item.model";
+import { SearchResults } from "../models/search-item.model";
 import { Subject } from "rxjs";
 
 @Injectable({

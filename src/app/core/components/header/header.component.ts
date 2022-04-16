@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SortingService } from "../../../shared/services/sorting.service";
+import { SortingService } from "../../../youtube/services/sorting.service";
 
 @Component({
   selector: 'app-header',
