@@ -1,8 +1,6 @@
 import {Component, Input} from '@angular/core';
 import { SearchResults } from "../../models/search-item.model";
-import { ItemService } from "../../services/item.service";
 import { SearchItem } from "../../models/search-response.model";
-import { SortingService } from "../../services/sorting.service";
 
 @Component({
   selector: 'app-search-item',
@@ -16,5 +14,4 @@ export class SearchItemComponent {
   public itemCards: SearchItem[] = [];
 
   @Input() item: any;
-
 }

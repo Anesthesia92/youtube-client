@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthGuard implements CanLoad {
 
   constructor(private router: Router) {}
@@ -23,4 +24,5 @@ export class AuthGuard implements CanLoad {
     }
     return true;
   }
+
 }

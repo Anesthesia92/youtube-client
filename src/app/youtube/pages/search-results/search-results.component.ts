@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SearchItem} from "../../models/search-response.model";
 import { ItemService } from "../../services/item.service";
 import { SortingService } from "../../services/sorting.service";
-import {SearchResults} from "../../models/search-item.model";
+import { SearchResults } from "../../models/search-item.model";
 
 @Component({
   selector: 'app-search-results',

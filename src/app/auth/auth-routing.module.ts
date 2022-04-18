@@ -1,9 +1,11 @@
 import { RouterModule, Routes } from "@angular/router";
-import { SearchResultsComponent } from "./pages/search-results/search-results.component";
 import { NgModule } from "@angular/core";
+import {AuthorizationComponent} from "./components/authorization/authorization.component";
 
 const routes: Routes = [
-
+  {
+    path: '', component: AuthorizationComponent
+  }
 ];
 
 @NgModule({
@@ -11,4 +13,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class YoutubeRoutingModule {}
+export class AuthRoutingModule {}

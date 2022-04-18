@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { SearchItemComponent } from "../search-item/search-item.component";
 import { ItemService } from "../../services/item.service";
 import { SearchItem } from "../../models/search-response.model";
 import { SearchResults } from "../../models/search-item.model";
+import {SearchItemComponent} from "../search-item/search-item.component";
 
 @Component({
   selector: 'app-search-info',
