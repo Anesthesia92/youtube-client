@@ -8,6 +8,8 @@ import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { PageAuthComponent } from "./pages/page-auth/page-auth.component";
+import {AuthGuard} from "./guards/auth.guard";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,9 +19,9 @@ import { PageAuthComponent } from "./pages/page-auth/page-auth.component";
     PageAuthComponent
   ],
   imports: [
-    CommonModule, AuthRoutingModule, MatInputModule, MatButtonModule, MatCardModule
+    CommonModule, AuthRoutingModule, MatInputModule, MatButtonModule, MatCardModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
   exports: [
     AuthorizationComponent

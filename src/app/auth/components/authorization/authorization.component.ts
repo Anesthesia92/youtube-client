@@ -1,8 +1,7 @@
 import { Component, Injectable } from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { AuthService } from "../../services/auth.service";
-import { SortingService } from "../../../youtube/services/sorting.service";
 
 @Component({
   selector: 'app-authorization',
@@ -16,12 +15,29 @@ import { SortingService } from "../../../youtube/services/sorting.service";
 
 export class AuthorizationComponent {
 
- // constructor(private fb: FormBuilder,
- //             private router: Router,
- //             private authService: AuthService,
- //             private sort: SortingService) {
- //
- //    }
+  public authForm: FormGroup | any;
+  public isSubmitted = false;
 
+  get formControls() { return this.authForm.controls; }
+
+ constructor(private fb: FormBuilder,
+             private router: Router,
+             private authService: AuthService) {}
+
+ ngOnInit() {
+   this.authForm = this.fb.group({
+     login: ['', [Validators.required]],
+     password: ['', [Validators.required]]
+   });
+ }
+
+  public signIn(){
+    this.isSubmitted = true;
+    if(this.authForm.invalid){
+      return;
+    }
+    this.authService.signIn(this.authForm.value);
+    this.router.navigateByUrl('/main');
+  }
 
 }

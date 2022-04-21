@@ -6,11 +6,12 @@ import { YoutubeModule } from "./youtube/youtube.module";
 import { CoreModule } from "./core/core.module";
 import { AuthModule}  from "./auth/auth.module";
 import { CommonModule } from "@angular/common";
+import {AuthGuard} from "./auth/guards/auth.guard";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [ CommonModule, BrowserModule, AppRoutingModule, YoutubeModule, CoreModule, AuthModule],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

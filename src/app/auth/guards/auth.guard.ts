@@ -19,7 +19,7 @@ export class AuthGuard implements CanLoad {
   | boolean
   | UrlTree {
     if (localStorage.getItem('auth') == '') {
-      this.router.navigate(['login']);
+      this.router.navigate(['main']);
       return false;
     }
     return true;
