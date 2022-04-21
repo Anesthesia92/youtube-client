@@ -1,0 +1,7 @@
+<router-outlet></router-outlet>
+<div class="search-container">
+<div class="search-container__cards">
+  <mat-card *ngFor="let item of items | sorting: sortType">
+<app-search-item [item]="item"> </app-search-item>
+    </mat-card>
+</div></div>

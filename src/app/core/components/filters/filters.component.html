@@ -1,0 +1,14 @@
+<mat-toolbar>
+<div class="buttons__container">
+  <div class="buttons__container-sort">
+  <p class="buttons-sorting sort">Sorting by:</p>
+    <p class="buttons-sorting__settings sort">
+  <a class="sort" (click)="sortingByDate()">data</a>
+  <a class="sort" (click)="sortingByViews()">count of views</a>
+  <span class="sort"> by word or sentence</span>
+    </p>
+    <div class="search-input">
+      <input matInput [(ngModel)]="filter" (keyup)="filtering()">
+    </div>
+  </div>
+</div> </mat-toolbar>
