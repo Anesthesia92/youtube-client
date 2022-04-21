@@ -16,18 +16,12 @@ import { SortingService } from "../../../youtube/services/sorting.service";
 
 export class AuthorizationComponent {
 
- constructor(private fb: FormBuilder,
-             private router: Router,
-             private authService: AuthService,
-             private sort: SortingService) {
- //   this.authForm = fb.group({
- //     login: ['user', [Validators.required]],
- //   password: ['pass', [Validators.required]],
- //   });
- // }
- //    ngOnInit() {
- //   this.sort.setSearchDisable();
-    }
+ // constructor(private fb: FormBuilder,
+ //             private router: Router,
+ //             private authService: AuthService,
+ //             private sort: SortingService) {
+ //
+ //    }
 
 
 }
