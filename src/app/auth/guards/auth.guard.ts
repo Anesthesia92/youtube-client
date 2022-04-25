@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 
 export class AuthGuard implements CanLoad {
-
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
   canLoad (
     route: Route,
@@ -24,5 +24,4 @@ export class AuthGuard implements CanLoad {
     }
     return true;
   }
-
 }
