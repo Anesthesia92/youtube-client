@@ -15,13 +15,15 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from "@angular/cor
 import { BottomColorDirective } from "../shared/directives/bottom-color.directive";
 import { SortingPipe } from "./pipes/sorting.pipe";
 import { MatButtonModule } from "@angular/material/button";
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { YoutubeInterceptor } from "./interceptors/youtube.interceptor";
 
 @NgModule({
   declarations: [SearchItemComponent, SearchInfoComponent, SearchResultsComponent, BottomColorDirective,
     SortingPipe],
   imports: [CommonModule, YoutubeRoutingModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule,
     MatExpansionModule, MatTreeModule, MatCardModule, FormsModule, YoutubeRoutingModule, MatButtonModule],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: YoutubeInterceptor, multi: true}],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [SearchResultsComponent]
 })

@@ -10,7 +10,7 @@ import { MatCardModule } from "@angular/material/card";
 import { PageAuthComponent } from "./pages/page-auth/page-auth.component";
 import { AuthGuard } from "../core/guards/auth.guard";
 import { ReactiveFormsModule } from "@angular/forms";
-import { LogoutComponent } from './components/logout/logout.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +18,12 @@ import { LogoutComponent } from './components/logout/logout.component';
     RegistrationComponent,
     AuthorizationComponent,
     PageAuthComponent,
-    LogoutComponent
+    ProfileComponent
   ],
   imports: [CommonModule, AuthRoutingModule, MatInputModule, MatButtonModule, MatCardModule, ReactiveFormsModule],
   providers: [AuthGuard],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
-  exports: [AuthorizationComponent, LogoutComponent],
+  exports: [AuthorizationComponent, ProfileComponent],
   bootstrap: [PageAuthComponent]
 })
 
