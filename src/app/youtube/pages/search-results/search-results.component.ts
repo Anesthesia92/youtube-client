@@ -28,7 +28,6 @@ export class SearchResultsComponent {
     })
     this.sort.sortParameter.subscribe(value => {
       this.sortType = value;
-      console.log(value)
     })
   }
 }

@@ -8,7 +8,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { PageAuthComponent } from "./pages/page-auth/page-auth.component";
-import { AuthGuard } from "./guards/auth.guard";
+import { AuthGuard } from "../core/guards/auth.guard";
 import { ReactiveFormsModule } from "@angular/forms";
 import { LogoutComponent } from './components/logout/logout.component';
 

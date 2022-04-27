@@ -21,5 +21,4 @@ export class SortingService {
   this.sortParameter.next(parameter);
 }
 
-
 }

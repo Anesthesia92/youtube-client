@@ -4,7 +4,7 @@ import { CoreRoutingModule } from "./core-routing.module";
 import { FiltersComponent } from "./components/filters/filters.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { SearchInputComponent } from "./components/search-input/search-input.component";
-import { LoginComponent } from "./components/login/login.component";
+import { LoginComponent } from "../auth/components/login/login.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import { MatToolbarModule } from "@angular/material/toolbar";
