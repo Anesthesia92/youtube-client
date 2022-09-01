@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
 })
 
 export class AuthGuard implements CanLoad {
+  constructor(private router: Router) {
+  }
 
-  constructor(private router: Router) {}
-
-  canLoad(
+  canLoad (
     route: Route,
     segments: UrlSegment[]
   ):
@@ -19,10 +19,9 @@ export class AuthGuard implements CanLoad {
   | boolean
   | UrlTree {
     if (localStorage.getItem('auth') == '') {
-      this.router.navigate(['login']);
+      this.router.navigate(['main']);
       return false;
     }
     return true;
   }
-
 }

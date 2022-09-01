@@ -1,4 +1,5 @@
 @import '../../../app.component';
+$font: 'Roboto', sans-serif;
 
 mat-card {
   width: 350px;
@@ -7,7 +8,7 @@ mat-card {
   margin: 120px auto 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .auth-container {
@@ -15,42 +16,32 @@ mat-card {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  &__login {
-    h2 {
-      font-family: 'Roboto', sans-serif;
+  height: 250px;
+  h2 {
+      font-family: $font;
       font-weight: 700;
       font-size: 18px;
       line-height: 21px;
-    }
   }
-  &__inputs {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    input {
-      background: #E0E0E0;
-      width: 343px;
-      height: 37px;
-      border: 1px solid #F2F2F2;
-    }
-    .input-text {
-      font-family: 'Roboto', sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 12px;
-      color: #828282;
-    }
+  .input-form {
+    font-family: $font;
+    background: #E0E0E0;
+    width: 343px;
+    height: 40px;
+    border: 1px solid #F2F2F2;
   }
   &__buttons {
+    font-family: $font;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 26px;
     button {
       width: 124px;
     }
   }
-
 }
 
+.has-error input[type="password"], .has-error input[type="text"] {
+  border-color: rgb(216, 12, 12);
+  color: rgb(230, 14, 14);
+}

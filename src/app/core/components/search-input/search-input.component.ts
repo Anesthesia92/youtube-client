@@ -26,6 +26,5 @@ export class SearchInputComponent {
 
   public filtering() {
     this.goSearch.emit(this.filter);
-
   }
 }

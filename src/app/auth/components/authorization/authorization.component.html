@@ -1,19 +1,20 @@
 <mat-card>
-  <div class="auth-container">
-    <div class="auth-container__login">
-    <h2>Login</h2>
-    </div>
-    <div class="auth-container__inputs user">
-      <p class="input-login input-text">login</p>
-      <input matInput>
-      <p class="input-password input-text pass">password</p>
-      <input matInput>
-    </div>
-  </div>
-  <div class="auth-container__buttons">
+<div class="auth-container">
+  <h2>Login</h2>
+  <form [formGroup]="authForm" class="login-container" (ngSubmit)="signIn()"> <p [ngClass]="{ 'has-error': isSubmitted && formControls['login'].errors }">
+    <input type="text" placeholder="login" formControlName="login" matInput class="input-form" autocomplete="off">
+  </p> <div *ngIf="isSubmitted && formControls['login'].errors" class="help-block">
+    <div *ngIf="formControls['login'].errors['required']">login is required</div>
+  </div> <p [ngClass]="{ 'has-error': isSubmitted && formControls['password'].errors }">
+    <input type="password" placeholder="Password" formControlName="password" matInput class="input-form" autocomplete="off">
+  </p> <div *ngIf="isSubmitted && formControls['password'].errors" class="help-block">
+    <div *ngIf="formControls['password'].errors['required']">Password is required</div>
+  </div> <p class="auth-container__buttons">
     <button mat-button color="primary">
-    Registration
+      Registration
     </button>
-    <button mat-raised-button color="primary" routerLink="/main">Login</button>
-  </div>
+    <button type="submit" mat-raised-button color="primary">Login</button>
+  </p>
+  </form>
+</div>
   </mat-card>

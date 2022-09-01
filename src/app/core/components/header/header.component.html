@@ -1,8 +1,8 @@
 <mat-toolbar>
   <app-search-input (goSearch)="goSearch($event)"
-                    (changeFilterComponent)="toggleFilter = !toggleFilter"
-  autocomplete="off">
+                    (changeFilterComponent)="toggleFilter = !toggleFilter" autocomplete="off">
   </app-search-input>
 <app-login></app-login>
+  <app-profile></app-profile>
 </mat-toolbar>
-<app-filters *ngIf="toggleFilter" (onSort)="onSort($event)"></app-filters>
+<app-filters *ngIf="toggleFilter" (onSort)="goSort($event)"></app-filters>

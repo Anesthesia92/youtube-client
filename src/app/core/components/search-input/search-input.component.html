@@ -14,10 +14,7 @@
   </svg>
 </button>
   <div class="search-input">
-  <input matInput>
-  <button mat-flat-button class="button-search" routerLink="/main" (click)="onSearch()" >
-    search
-  </button>
+  <input matInput routerLink="/main" (click)="onSearch()" [(ngModel)]="filter" (keyup)="filtering()">
   </div>
   <button mat-icon-button class="button-settings" (click)="toggleFilterComponent()">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
